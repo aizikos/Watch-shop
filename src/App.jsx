@@ -1,14 +1,48 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './components/Header'
+import Home from './components/Home'
+import Create from './components/Create'
+import Product from './components/Product'
+import Basket from './components/Basket'
+import { Route, Routes } from 'react-router-dom'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const routes = [
+   {
+    id: 1,
+    link: '/',
+    element: <Home/>
+   },
+   {
+    id: 2,
+    link: '/create',
+    element: <Create/>
+   },
+   {
+    id: 3,
+    link: '/shop',
+    element: <Product/>
+   },
+   {
+    id: 4,
+    link: '/basket',
+    element: <Basket/>
+   }
+
+  ]
 
   return (
     <>
-      <h1>Hi!</h1>
+      <Header/>
+      <Routes>
+        {
+          routes.map((el) => (
+            <Route path={el.link} element={el.element} key={el.id} />
+          ))
+        }
+      </Routes>
+      <Footer/>
     </>
   )
 }

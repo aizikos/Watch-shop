@@ -1,4 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
 *{
   margin: 0;
   padding: 0;
+  color:black
+}
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header{
+  padding: 30px 0;
+}
+
+.header-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-text{
+  font-size: 40px;
+  color: black;
+  font-weight: 900;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.input_searc{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.seach{
+  display: flex;
+  position: relative;
+}
+
+.seach input{
+  font-size: 16px;
+  line-height: 28px;
+  background-color: rgb(168 161 161 / 29%);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 35px;
+}
+
+.seach a{
+  font-size: 22px;
+  position: absolute;
+  left: 8px;
+  top: 10px;
+}
+
+.bag,
+.fav {
+  font-size: 22px;
 }
