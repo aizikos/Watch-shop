@@ -2,42 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
-  color:black
+  color: black
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.container{
+.container {
   width: 90%;
   margin: 0 auto;
 }
 
-.header{
-  padding: 30px 0;
+.header {
+  padding: 10px 0;
 }
 
-.header-menu{
+.header-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo-text{
+.logo-text {
   font-size: 40px;
   color: black;
   font-weight: 900;
 }
 
-.menu{
+.menu {
   display: flex;
   align-items: center;
   gap: 50px;
@@ -45,18 +45,18 @@ a{
   line-height: 28px;
 }
 
-.input_searc{
+.input_searc {
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-.seach{
+.seach {
   display: flex;
   position: relative;
 }
 
-.seach input{
+.seach input {
   font-size: 16px;
   line-height: 28px;
   background-color: rgb(168 161 161 / 29%);
@@ -65,7 +65,7 @@ a{
   border-radius: 35px;
 }
 
-.seach a{
+.seach a {
   font-size: 22px;
   position: absolute;
   left: 8px;
@@ -75,4 +75,21 @@ a{
 .bag,
 .fav {
   font-size: 22px;
+}
+
+.bag {
+  position: relative;
+}
+
+.quantity {
+  font-size: 12px;
+  background: red;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  width: 20px;
+  height: 18px;
 }

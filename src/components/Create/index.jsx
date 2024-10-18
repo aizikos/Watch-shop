@@ -8,6 +8,8 @@ const Create = () => {
     const [productUrl, setProductUrl] = useState('');
     const [productPrice, setProductPrice] = useState('');
 
+    const {product}= useSelector((s) =>s)
+
 
     const dispatch = useDispatch()
 
@@ -43,11 +45,12 @@ const Create = () => {
             errorMessage()
         } else {
             const NewProduct = {
-                id: Math.floor(Math.random()*100),
+                id: product.length ? product[product.length-1].id+1: 1,
                 name: productName,
                 img: productUrl,
                 price: productPrice,
-                raiting: 5
+                raiting: 5,
+                quently: 1
             }
             dispatch({ type: 'CREATE_PRODUCT', payload: NewProduct })
             succses()
